@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CashFileLogger extends FileEventLogger {
-    int cashSize;
-    List<Event> cash = new ArrayList<Event>();
+    private int cashSize;
+    private List<Event> cash = new ArrayList<Event>();
     private static final Logger LOGGER = Logger.getLogger(CashFileLogger.class);
 
     public CashFileLogger(int cashSize, String fileName) {

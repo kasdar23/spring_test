@@ -2,7 +2,6 @@ package app.loggers;
 
 import app.Event;
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,8 +9,6 @@ import java.io.IOException;
 public class FileEventLogger implements EventLogger {
     private String fileName;
     private File file;
-    private static final Logger LOGGER = Logger.getLogger(FileEventLogger.class);
-
 
     public FileEventLogger(String fileName) {
         this.fileName = fileName;

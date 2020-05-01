@@ -27,17 +27,13 @@
         <constructor-arg value="src/main/resources/eventLogger.txt"/>
     </bean>
 
-    <bean id="cashFileLogger" class="CashFileLogger"
-          init-method="init"
+    <bean id="cashFileLogger" class="CashFileLogger" parent="fileEventLogger"
           destroy-method="destroy">
         <constructor-arg type="int" value="1"/>
-        <constructor-arg value="src/main/resources/eventLogger.txt"/>
     </bean>
 
     <bean id="app" class="App">
         <constructor-arg ref="client"/>
-        <!--        <constructor-arg ref="eventLogger"/>-->
-<!--        <constructor-arg ref="fileEventLogger"/>-->
         <constructor-arg ref="cashFileLogger"/>
     </bean>
 

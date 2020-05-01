@@ -7,8 +7,7 @@ import java.io.IOException;
 @AllArgsConstructor
 public class App {
     Client client;
-//        ConsoleEventLogger eventLogger;
-    FileEventLogger fileEventLogger;
+    CashFileLogger cashFileLogger;
 
     public static void main(String[] args) throws IOException {
         ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
@@ -17,11 +16,9 @@ public class App {
         ctx.close();
     }
 
-    public void logEvent(Event event) throws IOException {
-//        String message = event.msg.replaceAll(client.getId(),
-//                client.getFullName());
+    public void logEvent(Event event){
         event.setMsg("Message 1");
-        fileEventLogger.logEvent(event);
+        cashFileLogger.logEvent(event);
     }
 
 }

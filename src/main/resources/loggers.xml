@@ -5,14 +5,14 @@
  		http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="eventLogger" class="ConsoleEventLogger"/>
+    <bean id="eventLogger" class="app.loggers.ConsoleEventLogger"/>
 
-    <bean id="fileEventLogger" class="FileEventLogger"
+    <bean id="fileEventLogger" class="app.loggers.FileEventLogger"
           init-method="init">
         <constructor-arg value="src/main/resources/eventLogger.txt"/>
     </bean>
 
-    <bean id="cashFileLogger" class="CashFileLogger" parent="fileEventLogger"
+    <bean id="cashFileLogger" class="app.loggers.CashFileLogger" parent="fileEventLogger"
           destroy-method="destroy">
         <constructor-arg type="int" value="1"/>
     </bean>

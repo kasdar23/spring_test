@@ -1,3 +1,6 @@
+package app.loggers;
+
+import app.Event;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 

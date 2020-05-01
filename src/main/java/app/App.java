@@ -1,3 +1,6 @@
+package app;
+
+import app.loggers.CashFileLogger;
 import lombok.AllArgsConstructor;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

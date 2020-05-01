@@ -1,3 +1,7 @@
+package app.loggers;
+
+import app.Event;
+
 import java.io.IOException;
 
 public interface EventLogger {
